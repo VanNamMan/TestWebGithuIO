@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101714" />
+    <meta name="description" content="Trò chơi Rắn săn mồi đơn giản, chơi ngay trên trình duyệt." />
+    <title>Rắn Săn Mồi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div><p class="eyebrow">TRÒ CHƠI MINI</p><h1>Rắn Săn Mồi</h1></div>
+        <button id="soundButton" class="icon-button" type="button" aria-label="Bật hoặc tắt âm thanh" title="Âm thanh"><span aria-hidden="true">♪</span></button>
+      </header>
+      <section class="scoreboard" aria-label="Bảng điểm">
+        <div class="score-card"><span>Điểm</span><strong id="score">0</strong></div>
+        <div class="score-card"><span>Kỷ lục</span><strong id="highScore">0</strong></div>
+        <div class="score-card"><span>Tốc độ</span><strong id="speed">1×</strong></div>
+      </section>
+      <section class="board-wrap" aria-label="Khu vực chơi">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card">
+            <div class="snake-mark" aria-hidden="true">S</div>
+            <h2 id="overlayTitle">Sẵn sàng?</h2>
+            <p id="overlayText">Ăn thật nhiều táo và đừng chạm vào tường hoặc chính mình.</p>
+            <button id="startButton" class="primary-button" type="button">Bắt đầu chơi</button>
+          </div>
+        </div>
+      </section>
+      <section class="controls" aria-label="Điều khiển cảm ứng">
+        <button class="control-button up" type="button" data-direction="up" aria-label="Đi lên">↑</button>
+        <button class="control-button left" type="button" data-direction="left" aria-label="Sang trái">←</button>
+        <button class="control-button down" type="button" data-direction="down" aria-label="Đi xuống">↓</button>
+        <button class="control-button right" type="button" data-direction="right" aria-label="Sang phải">→</button>
+      </section>
+      <footer><p><kbd>WASD</kbd> hoặc phím mũi tên để di chuyển · <kbd>Space</kbd> để tạm dừng</p></footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
